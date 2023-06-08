@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.84.0">
+
+    <title>EC</title>
+      <link rel="icon" type="image/x-icon" href="/static/images/ec.jpeg">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/signin.css">
+      <scrip src = "/static/js/bootstrap.bundle.min.js"></scrip>
+    <!-- Bootstrap core CSS -->
+    <style>
+     .flexcontainer {
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     margin: 20px auto;
+     background-color: rgb(204, 233, 233);
+     width : 98%;
+     margin-top: 0px;
+     }
+      .flexelem{
+      width: 25%;
+      font-size : 18px;
+      margin: 20px
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+<!--Nav Bar -->
+<nav class="flexcontainer">
+ <div class = "flexelem">
+  <img src="/static/images/school.jpeg" alt="" width="60" height="60">
+            <div>COHK</div>
+
+ </div>
+  <div class = "flexelem">
+  <img src="/static/images/ec.jpeg" alt="" width="60" height="60">
+      <div>EC COUNCIL</div>
+ </div>
+  <div class = "flexelem">
+  <img src="/static/images/colledge.jpeg" alt="" width="60" height="60">
+            <div>DRATSA</div>
+
+ </div>
+</nav>
+<main class="form-signin" style="margin-top: 5px">
+  <form action = "{{ url_for('Main.login') }}" method="post">
+      <h1 class="h3 mb-3 fw-normal">OFFICER LOGIN</h1>
+      <hr>
+    <img class="mb-4" src="/static/images/ec.jpeg" alt="" width="100" height="100">
+    <h1 class="h3 mb-3 fw-normal">Welcome to DRATSA 2023 Election Stats Page!</h1>
+     {% if alert %}
+       <div class ="alert alert-danger" role = "alert">
+           {{ message }}
+       </div>
+      {% endif %}
+    <div class="form-floating">
+      <input type="text" class="form-control" required name="index" id="index" placeholder="Index Number">
+      <label for="index">Index Number</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" required class="form-control" name= "password" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2023 DRATSA Elections</p>
+  </form>
+</main>
+  </body>
+</html>

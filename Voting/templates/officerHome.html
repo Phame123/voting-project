@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.84.0">
+
+    <title>EC</title>
+      <link rel="icon" type="image/x-icon" href="/static/images/ec.jpeg">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/signin.css">
+    <!-- Bootstrap core CSS -->
+    <style>
+     .flexcontainer {
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     margin: 20px auto;
+     background-color: rgb(204, 233, 233);
+     width : 98%;
+     margin-top: 0px;
+     text-align :center
+     }
+      .flexelem{
+      width: 25%;
+      font-size : 18px;
+      margin: 20px
+      }
+      .flexelem2{
+      width: 25%;
+      font-size : 0.8rem;
+      margin: 20px;
+      font-weight: bold;
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      input[type=radio] {
+      width : 20px;
+      height: 20px;
+      margin: 10px;
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+    <link href="/static/css/radio.css" rel ="stylesheet">
+    <link href="/static/css/main.css">
+  </head>
+</head>
+<body>
+<!-- NavBar !-->
+<nav class="flexcontainer">
+ <div class = "flexelem">
+  <img src="/static/images/school.jpeg" alt="" width="60" height="60">
+            <div>COHK</div>
+
+ </div>
+  <div class = "flexelem">
+  <img src="/static/images/ec.jpeg" alt="" width="60" height="60">
+      <div>EC COUNCIL</div>
+ </div>
+  <div class = "flexelem">
+  <img src="/static/images/colledge.jpeg" alt="" width="60" height="60">
+            <div>DRATSA</div>
+ </div>
+</nav>
+<!-- End of Navbar -->
+<div>
+    <main class="container" >
+  <div class="bg-light p-5 rounded" style="margin:10px">
+    <h1>Add Student</h1>
+    <p class="lead">Make A student eligible to Vote by adding Index number and password</p>
+    <a class="btn btn-lg btn-primary" href="{{ url_for('Main.add_student') }}" role="button">Add Student</a>
+  </div>
+</main>
+
+    <main class="container">
+  <div class="bg-light p-5 rounded" style = "margin: 10px">
+    <h1>Show Password</h1>
+    <p class="lead">Show A particular Voter Password</p>
+    <a class="btn btn-lg btn-primary" href="{{ url_for('Main.show') }}" role="button">Show Password</a>
+  </div>
+</main>
+
+    <main class="container">
+  <div class="bg-light p-5 rounded" style="margin:10px">
+    <h1>Summary Page</h1>
+    <p class="lead">View the Statistics page of various candidate in currently running elections</p>
+    <a class="btn btn-lg btn-primary" href="{{ url_for('Main.summary') }}" role="button">Summary</a>
+  </div>
+</main>
+
+</div>
+</body>
+</html>
